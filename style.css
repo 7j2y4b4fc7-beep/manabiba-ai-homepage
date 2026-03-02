@@ -82,14 +82,14 @@ nav a:hover {
 }
 
 .hero h2 {
-    font-size: clamp(1rem, 5vw, 3.5rem);
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
     color: #5d4037;
     margin-bottom: 0.5em;
     line-height: 1.5;
 }
 
 .hero p {
-    font-size: clamp(1rem, 1.8vw, 1.25rem);
+    font-size: clamp(0.7rem, 1.8vw, 1.25rem);
     line-height: 1.8;
     color: #5d4037;
     max-width: 800px;
@@ -112,7 +112,7 @@ nav a:hover {
 
     .hero p {
         /* スマホでは文字を少し小さく、行間も少し詰める */
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         line-height: 1.6;
         text-align: left;
         /* スマホでは左寄せの方が読みやすい場合が多い */
