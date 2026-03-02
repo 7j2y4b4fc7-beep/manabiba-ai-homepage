@@ -136,6 +136,22 @@ nav a:hover {
     border: 2px solid #ffb300;
 }
 
+@media (max-width: 768px) {
+    #calendar {
+        font-size: 0.7rem;
+        padding: 10px;
+    }
+
+    .fc .fc-toolbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .fc .fc-toolbar-title {
+        font-size: 1rem;
+    }
+}
+
 #status {
     padding: 40px 20px;
     max-width: 800px;
@@ -278,4 +294,5 @@ th {
 .contact-list li {
     margin-bottom: 10px;
 }
+
 
