@@ -76,11 +76,49 @@ nav a:hover {
 }
 
 .hero {
+    padding: clamp(40px, 10vw, 100px) clamp(20px, 5vw, 80px);
     text-align: center;
-    padding: 50px 20px;
-    background-color: #fff;
-    border-bottom: 3px solid #5d4037;
+    background-color: #f9f9f9;
 }
+
+.hero h2 {
+    font-size: clamp(1rem, 5vw, 3.5rem);
+    color: #5d4037;
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+}
+
+.hero p {
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
+    line-height: 1.8;
+    color: #5d4037;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        /* スマホでは上下の余白を少し詰める */
+        padding: 40px 20px;
+    }
+
+    .hero h2 {
+        /* スマホ用の固定サイズ、もしくは小さめの可変にする */
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        /* スマホでは文字を少し小さく、行間も少し詰める */
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: left;
+        /* スマホでは左寄せの方が読みやすい場合が多い */
+    }
+
+}
+
+
 
 #calendar-section {
     padding: 40px 20px;
