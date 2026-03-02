@@ -142,6 +142,10 @@ nav a:hover {
         padding: 10px;
     }
 
+    .fc {
+        min-width: auto !important;
+    }
+
     .fc .fc-toolbar {
         flex-direction: column;
         gap: 10px;
@@ -294,5 +298,4 @@ th {
 .contact-list li {
     margin-bottom: 10px;
 }
-
 
