@@ -13,22 +13,33 @@ header {
     background-color: #ffb300;
     /*テキストの色（茶色）*/
     color: #5d4037;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 5%;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     gap: 15px;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin: 0;
+    white-space: nowrap;
     font-weight: bold;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
+    list-style: none;
     gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5d4037;
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
 }
 
 nav a {
@@ -39,6 +50,29 @@ nav a {
 
 nav a:hover {
     color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        /* 縦に並べる */
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 10px;
+        /* スマホでは少し詰め気味に */
+    }
+
+    nav ul li a {
+        font-size: 0.85rem;
+        /* スマホ用の固定サイズ */
+    }
 }
 
 .hero {
