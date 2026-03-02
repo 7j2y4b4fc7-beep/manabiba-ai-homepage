@@ -104,13 +104,13 @@ nav a:hover {
     }
 
     .hero h2 {
-        /* スマホ用の固定サイズ、もしくは小さめの可変にする */
-        font-size: 1.8rem;
+        /* スマホ用の固定サイズ */
+        font-size: 1rem;
     }
 
     .hero p {
         /* スマホでは文字を少し小さく、行間も少し詰める */
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         line-height: 1.6;
         text-align: left;
         /* スマホでは左寄せの方が読みやすい場合が多い */
