@@ -181,7 +181,9 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3738389186146!2d136.0
         document.addEventListener('DOMContentLoaded', function () {
             const loader = document.getElementById('loader');
             window.addEventListener('load', () => {
-                loader.classList.add('loaded');
+                setTimeout(() => {
+                    loader.classList.add('loaded');
+                }, 1500); // ローディング画面を1.5秒表示
             });
             const now = new Date();
             const year = now.getFullYear();
