@@ -129,24 +129,32 @@ nav a:hover {
 }
 
 #calendar {
-    max-width: 100%;
-    box-sizing: border-box;
     font-family: Kiwi Maru, serif;
     background: white;
-    padding: 20px;
+    padding: 10px;
+    /* スマホ用に少し小さく */
     border-radius: 10px;
     border: 2px solid #ffb300;
+    max-width: 100%;
+    /* 親要素からはみ出さないようにする */
+    box-sizing: border-box;
+    /* パディングを幅に含める */
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
     #calendar {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         padding: 10px;
     }
 
-    .fc {
+    .fc,
+    .fc-view-harness,
+    .fc-scrollgrid {
+        width: 100% !important;
         min-width: auto !important;
     }
+
 
     .fc .fc-toolbar {
         flex-direction: column;
