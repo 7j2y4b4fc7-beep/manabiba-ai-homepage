@@ -144,40 +144,35 @@ nav a:hover {
 
 @media (max-width: 768px) {
 
-    /* カレンダー全体の構造をリセットして再計算させる */
-    .fc-scrollgrid {
-        display: table !important;
-        width: 100% !important;
-        table-layout: fixed !important;
-        border-collapse: collapse !important;
-        /* 線を重ねてズレを防ぐ */
-    }
-
-    /* ヘッダー部分（月火水…）のズレを解消 */
-    .fc-col-header {
-        width: 100% !important;
-        table-layout: fixed !important;
-        margin: 0 !important;
-    }
-
-    /* ボディ部分（日付）のズレを解消 */
+    /* 1. カレンダーを包むすべてのテーブル要素を「均等分割」モードにする */
+    .fc-scrollgrid,
+    .fc-col-header,
     .fc-daygrid-body,
     .fc-scrollgrid-sync-table {
         width: 100% !important;
         table-layout: fixed !important;
+        /* これで列幅を強制的に固定 */
+        min-width: 0 !important;
     }
 
-    /* 各セルの幅を強制的に7等分する */
+    /* 2. ヘッダー（曜日）とボディ（日付）の「枠組み」を完全に一致させる */
     .fc-col-header-cell,
     .fc-daygrid-day {
-        width: calc(100% / 7) !important;
+        /* 7等分をミリ単位まで強制 */
+        width: 14.2857% !important;
+        max-width: 14.2857% !important;
         box-sizing: border-box !important;
     }
 
-    /* 曜日のテキストサイズ微調整 */
-    .fc .fc-col-header-cell-cushion {
-        font-size: 0.6rem;
-        padding: 4px 0 !important;
+    /* 3. 内部の「隙間」をゼロにして線をくっつける */
+    .fc-scrollgrid {
+        border-collapse: collapse !important;
+    }
+
+    /* 4. もし線が消えたら困るから、セルの右側に線を強制的に引く */
+    .fc-theme-standard td,
+    .fc-theme-standard th {
+        border: 1px solid #ddd !important;
     }
 }
 
