@@ -54,27 +54,17 @@ nav a:hover {
 
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        /* 縦に並べる */
-        text-align: center;
         padding: 1rem 2%;
-    }
-
-    nav {
-        margin-top: 15px;
     }
 
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
         gap: 5px 12px;
-        /* スマホでは少し詰め気味に */
     }
 
     nav ul li a {
         font-size: 0.75rem;
-        /* スマホ用の固定サイズ */
-        white-space: nowrap;
         padding: 5px 8px;
         background: rgba(255, 255, 255, 0.2);
         border-radius: 5px;
