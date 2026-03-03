@@ -351,47 +351,52 @@ th {
     width: 100%;
     height: 100%;
     background-color: #ffb300;
-    /* ヘッダーと同じ黄色 */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    /* 一番手前に表示 */
     transition: opacity 0.8s ease, visibility 0.8s;
 }
 
 .loader-content {
     text-align: center;
+    /* サブテキスト（pタグ）の色をしっかり指定 */
     color: #5d4037;
-    animation: pulse 2s infinite;
-    /* ふわふわさせるアニメーション */
 }
 
 .loader-logo {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    font-weight: bold;
+    /* キラキラの設定 */
+    background: linear-gradient(to right, #5d4037 30%, #fff 50%, #5d4037 70%);
+    background-size: 200% auto;
+    /* 背景を文字で切り抜く */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* 文字の色を透明にすることで、背景のグラデーションを見せる */
+    color: transparent;
+    animation: shimmer 3s linear infinite;
 }
 
-/* 読み込みが終わったら消すためのクラス */
-.loaded {
-    opacity: 0;
-    visibility: hidden;
+/* サブテキストは透明にせず、茶色で表示 */
+.loader-content p {
+    color: #5d4037;
+    margin: 0;
+    font-size: 1rem;
 }
 
-/* ふわふわ動くアニメーションの定義 */
-@keyframes pulse {
+@keyframes shimmer {
     0% {
-        transform: scale(1);
-        opacity: 0.8;
-    }
-
-    50% {
-        transform: scale(1.05);
-        opacity: 1;
+        background-position: 200% center;
     }
 
     100% {
-        transform: scale(1);
-        opacity: 0.8;
+        background-position: -200% center;
     }
+}
+
+.loaded {
+    opacity: 0;
+    visibility: hidden;
 }
