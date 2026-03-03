@@ -141,45 +141,53 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+
+    /* --- A. 文字を小さくする設定（新しい方） --- */
     #calendar {
-        font-size: 0.4rem;
+        font-size: 0.5rem !important;
     }
 
-    .fc .fc-daygrid-day-number {
+    .fc .fc-col-header-cell-cushion {
         font-size: 0.3rem !important;
-        padding: 1px 3px !important;
+        padding: 2px 0 !important;
     }
 
-    .fc-event-title {
+    #calendar .fc-daygrid-day-number {
         font-size: 0.3rem !important;
-        font-weight: normal !important;
+        padding: 0 2px !important;
     }
 
-    /* 1. カレンダーを包むすべてのテーブル要素を「均等分割」モードにする */
+    #calendar .fc-event-title,
+    #calendar .fc-daygrid-event {
+        font-size: 0.3rem !important;
+        line-height: 1.1 !important;
+        white-space: normal !important;
+    }
+
+    .fc-daygrid-event-harness {
+        margin-top: 1px !important;
+    }
+
+    /* --- B. 1画面に収めて線を揃える設定（前の成功した方） --- */
     .fc-scrollgrid,
     .fc-col-header,
     .fc-daygrid-body,
     .fc-scrollgrid-sync-table {
         width: 100% !important;
         table-layout: fixed !important;
-        /* これで列幅を強制的に固定 */
         min-width: 0 !important;
     }
 
-    /* 2. ヘッダー（曜日）とボディ（日付）の「枠組み」を完全に一致させる */
     .fc-col-header-cell,
     .fc-daygrid-day {
-        /* 7等分をミリ単位まで強制 */
         max-width: 14.2857% !important;
         box-sizing: border-box !important;
     }
 
-    /* 3. 内部の「隙間」をゼロにして線をくっつける */
     .fc-scrollgrid {
         border-collapse: collapse !important;
     }
 
-    /* 4. もし線が消えたら困るから、セルの右側に線を強制的に引く */
     .fc-theme-standard td,
     .fc-theme-standard th {
         border: 1px solid #ddd !important;
