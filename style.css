@@ -142,16 +142,16 @@ nav a:hover {
 
 @media (max-width: 768px) {
     #calendar {
-        font-size: 0.55rem;
+        font-size: 0.4rem;
     }
 
     .fc .fc-daygrid-day-number {
-        font-size: 0.5rem !important;
+        font-size: 0.3rem !important;
         padding: 1px 3px !important;
     }
 
     .fc-event-title {
-        font-size: 0.5rem !important;
+        font-size: 0.3rem !important;
         font-weight: normal !important;
     }
 
