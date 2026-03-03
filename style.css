@@ -143,45 +143,41 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
-    #calendar {
-        font-size: 0.6rem;
-        /* 文字をさらに小さく */
-        padding: 5px;
-    }
 
-    /* カレンダー内部の余白を極限まで削る */
-    .fc .fc-daygrid-day-top {
-        flex-direction: column;
-        /* 数字を中央寄せっぽく */
-    }
-
-    .fc .fc-daygrid-day-number {
-        padding: 1px !important;
-        display: block;
-        text-align: center;
-        width: 100%;
-    }
-
-    /* セル（日付のマス）の最小高さを指定して潰れすぎを防ぐ */
-    .fc .fc-daygrid-day-frame {
-        min-height: 40px !important;
-    }
-
-    /* ★最重要：表の横幅を強制固定して、余白をゼロにする */
-    .fc-scrollgrid,
-    .fc-datagrid-body,
-    .fc-col-header,
-    .fc-daygrid-body {
+    /* カレンダー全体の構造をリセットして再計算させる */
+    .fc-scrollgrid {
+        display: table !important;
         width: 100% !important;
-        min-width: 0 !important;
         table-layout: fixed !important;
-        /* 列の幅を均等に強制固定 */
+        border-collapse: collapse !important;
+        /* 線を重ねてズレを防ぐ */
     }
 
-    /* 曜日（日〜土）のラベルをさらに小さく */
+    /* ヘッダー部分（月火水…）のズレを解消 */
+    .fc-col-header {
+        width: 100% !important;
+        table-layout: fixed !important;
+        margin: 0 !important;
+    }
+
+    /* ボディ部分（日付）のズレを解消 */
+    .fc-daygrid-body,
+    .fc-scrollgrid-sync-table {
+        width: 100% !important;
+        table-layout: fixed !important;
+    }
+
+    /* 各セルの幅を強制的に7等分する */
+    .fc-col-header-cell,
+    .fc-daygrid-day {
+        width: calc(100% / 7) !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 曜日のテキストサイズ微調整 */
     .fc .fc-col-header-cell-cushion {
-        padding: 2px 0 !important;
-        font-size: 0.55rem;
+        font-size: 0.6rem;
+        padding: 4px 0 !important;
     }
 }
 
