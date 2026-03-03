@@ -143,31 +143,45 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
-
-    /* カレンダーを包むコンテナの設定 */
-    .table-container {
-        width: 100%;
-        overflow-x: auto;
-        /* 横スクロールを許可 */
-        -webkit-overflow-scrolling: touch;
-        border: 2px solid #ffb300;
-        /* 黄色の枠をこっちに引っ越し */
-        border-radius: 10px;
-        background: white;
-    }
-
     #calendar {
-        /* カレンダー本体には枠をつけず、中身が潰れない幅を確保する */
-        min-width: 500px;
-        border: none;
+        font-size: 0.6rem;
+        /* 文字をさらに小さく */
         padding: 5px;
     }
 
-    .fc .fc-toolbar {
-        /* ボタン類がスクロールと一緒に隠れないように調整 */
+    /* カレンダー内部の余白を極限まで削る */
+    .fc .fc-daygrid-day-top {
         flex-direction: column;
-        gap: 8px;
-        margin-bottom: 10px;
+        /* 数字を中央寄せっぽく */
+    }
+
+    .fc .fc-daygrid-day-number {
+        padding: 1px !important;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* セル（日付のマス）の最小高さを指定して潰れすぎを防ぐ */
+    .fc .fc-daygrid-day-frame {
+        min-height: 40px !important;
+    }
+
+    /* ★最重要：表の横幅を強制固定して、余白をゼロにする */
+    .fc-scrollgrid,
+    .fc-datagrid-body,
+    .fc-col-header,
+    .fc-daygrid-body {
+        width: 100% !important;
+        min-width: 0 !important;
+        table-layout: fixed !important;
+        /* 列の幅を均等に強制固定 */
+    }
+
+    /* 曜日（日〜土）のラベルをさらに小さく */
+    .fc .fc-col-header-cell-cushion {
+        padding: 2px 0 !important;
+        font-size: 0.55rem;
     }
 }
 
