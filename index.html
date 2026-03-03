@@ -205,6 +205,13 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3738389186146!2d136.0
                 ]
             });
             calendar.render();
+
+            // カレンダーを描画した直後に実行されるように設定
+            window.addEventListener('load', function () {
+                setTimeout(function () {
+                    calendar.updateSize();
+                }, 500); // 0.5秒後に再計算
+            });
         });
 
     </script>
