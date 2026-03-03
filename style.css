@@ -355,7 +355,7 @@ th {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    transition: opacity 0.8s ease, visibility 0.8s;
+    transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .loader-content {
@@ -366,7 +366,6 @@ th {
 
 .loader-logo {
     font-size: 2.5rem;
-    margin-bottom: 10px;
     font-weight: bold;
     /* キラキラの設定 */
     background: linear-gradient(to right, #5d4037 30%, #fff 50%, #5d4037 70%);
@@ -379,11 +378,12 @@ th {
     animation: shimmer 3s linear infinite;
 }
 
-/* サブテキストは透明にせず、茶色で表示 */
-.loader-content p {
-    color: #5d4037;
-    margin: 0;
-    font-size: 1rem;
+.loaded#loader {
+    transform: translateY(-100%);
+}
+
+header {
+    z-index: 100;
 }
 
 @keyframes shimmer {
@@ -394,9 +394,4 @@ th {
     100% {
         background-position: -200% center;
     }
-}
-
-.loaded {
-    opacity: 0;
-    visibility: hidden;
 }
