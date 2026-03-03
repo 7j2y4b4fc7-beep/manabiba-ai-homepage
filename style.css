@@ -342,3 +342,56 @@ th {
 .contact-list li {
     margin-bottom: 10px;
 }
+
+/* オープニング画面のスタイル */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffb300;
+    /* ヘッダーと同じ黄色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* 一番手前に表示 */
+    transition: opacity 0.8s ease, visibility 0.8s;
+}
+
+.loader-content {
+    text-align: center;
+    color: #5d4037;
+    animation: pulse 2s infinite;
+    /* ふわふわさせるアニメーション */
+}
+
+.loader-logo {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* 読み込みが終わったら消すためのクラス */
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ふわふわ動くアニメーションの定義 */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
