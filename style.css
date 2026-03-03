@@ -144,22 +144,22 @@ nav a:hover {
 
     /* --- A. 文字を小さくする設定（新しい方） --- */
     #calendar {
-        font-size: 0.5rem !important;
+        font-size: 0.7rem !important;
     }
 
     .fc .fc-col-header-cell-cushion {
-        font-size: 0.5rem !important;
+        font-size: 0.7rem !important;
         padding: 2px 0 !important;
     }
 
     #calendar .fc-daygrid-day-number {
-        font-size: 0.5rem !important;
+        font-size: 0.7rem !important;
         padding: 0 2px !important;
     }
 
     #calendar .fc-event-title,
     #calendar .fc-daygrid-event {
-        font-size: 0.5rem !important;
+        font-size: 0.7rem !important;
         line-height: 1.1 !important;
         white-space: normal !important;
     }
