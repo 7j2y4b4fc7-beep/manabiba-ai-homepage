@@ -15,6 +15,12 @@
 
 <body>
     <header>
+        <div id="loader">
+            <div class="loader-content">
+                <h2 class="loader-logo">学び場 あい</h2>
+                <p>明日に向かって、一歩ずつ。</p>
+            </div>
+        </div>
         <div class="logo">
             <h1>学び場 あい</h1>
         </div>
@@ -172,6 +178,10 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3738389186146!2d136.0
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            const loader = document.getElementById('loader');
+            window.addEventListener('load', () => {
+                loader.classList.add('loaded');
+            });
             const now = new Date();
             const year = now.getFullYear();
             const month = now.getMonth() + 1;
