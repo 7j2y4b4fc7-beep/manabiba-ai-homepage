@@ -65,13 +65,17 @@ nav a:hover {
 
     nav ul {
         justify-content: center;
-        gap: 10px;
+        gap: 8px 12px;
         /* スマホでは少し詰め気味に */
     }
 
     nav ul li a {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         /* スマホ用の固定サイズ */
+        white-space: nowrap;
+        padding: 5px 8px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
     }
 }
 
