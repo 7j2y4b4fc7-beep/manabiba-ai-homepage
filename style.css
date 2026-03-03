@@ -159,7 +159,6 @@ nav a:hover {
     .fc-col-header-cell,
     .fc-daygrid-day {
         /* 7等分をミリ単位まで強制 */
-        width: 14.2857% !important;
         max-width: 14.2857% !important;
         box-sizing: border-box !important;
     }
@@ -318,4 +317,3 @@ th {
 .contact-list li {
     margin-bottom: 10px;
 }
-
