@@ -129,6 +129,8 @@ nav a:hover {
 }
 
 #calendar {
+    max-width: 100%;
+    box-sizing: border-box;
     font-family: Kiwi Maru, serif;
     background: white;
     padding: 20px;
