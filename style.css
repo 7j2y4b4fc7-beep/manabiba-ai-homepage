@@ -222,7 +222,7 @@ nav a:hover {
     }
 
     .himawari-1 {
-        top: -20%;
+        top: -10%;
         left: 40%;
         width: clamp(400px, 70vw, 1000px);
     }
