@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学び場 あい 公式ホームページ</title>
+    <!-- 学び場あいの説明文を入力してください。検索エンジンで検索した際に表示される文章になります。 -->
     <meta name="description" content="学び場あいの公式ホームページです。学校になかなか通えていない生徒などを中心に、勉強に不安を抱えている子供を支援している福井県敦賀市の塾です。">
+
     <meta name="robots" content="noindex">
     <meta property="og:title" content="学び場 あい 公式ホームページ">
     <meta property="og:description" content="学び場あいの活動予定や最新情報を掲載しています。">
@@ -17,6 +19,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
 </head>
+
+<!-- このstyleの内容は、別ファイルstyle.cssに記載されています。 -->
 <style>
 </style>
 
@@ -24,12 +28,15 @@
     <div id="loader">
         <h2 class="loader-logo">学び場 あい</h2>
     </div>
+
     <header id="main-header">
         <div class="logo">
             <h1>学び場 あい</h1>
         </div>
+
         <nav>
             <ul>
+                <!-- 画面冒頭のページ内各セクションへのリンクです。必要に応じて項目を追加してください。 -->
                 <li><a href="#calendar-section">開講カレンダー</a></li>
                 <li><a href="#status">先生の在校状況</a></li>
                 <li><a href="#access">会場へのアクセス</a></li>
@@ -38,15 +45,23 @@
         </nav>
     </header>
 
+
     <main>
+        <!-- heroという背景が白い部分のセクションです。最初のチラシに書いた説明文を入れています。必要に応じて変更してください。 -->
         <section class="hero">
+            <div class="hero-himawari himawari-1"></div>
+            <div class="hero-himawari himawari-2"></div>
+            <div class="hero-himawari himawari-3"></div>
             <h2><span style="display: inline-block;">明日に向かって、</span><span style="display: inline-block;">一歩ずつ</span>
             </h2>
+            <!-- 最初のチラシに書いた説明文です。必要に応じて変更してください。改行を任意で行う場合は<br>を入れてください。 -->
             <p>「この問題の解き方がよくわからない」<br>「この言葉の意味を説明してほしい」<br>「そろそろ勉強に力を入れたい」など、<br>こんな気持ちを抱えている小学5年生から中学3年生のみなさんへ。<br>
                 学び場 あい
                 では、一人一人の気持ちやペースを大切にしながら、<br>教科書を中心に無理なく学習をサポートしていきます。<br><br>「もう一度復習しよう」<br>「少しずつやってみよう」<br>という気持ちがあれば大丈夫です。<br>安心して始められる場所がここにあります。まずはお気軽にご相談ください。
             </p>
         </section>
+
+        <!-- 開講カレンダーのセクションです。ここは特に変更する必要はないかと思います。 -->
         <section id="calendar-section">
             <h3>開講カレンダー</h3>
             <div class="table-container">
@@ -54,7 +69,7 @@
             </div>
         </section>
 
-
+        <!-- 先生の在校状況のセクションです。先生の名前と時間帯ごとの出欠を⚪︎か×で入力してください。必要に応じて先生の行を追加してください。  -->
         <section id="status">
             <h3>本日<span id="today-date"></span>の先生</h3>
             <p>不在の場合があります。こちらでご確認ください。</p>
@@ -63,43 +78,59 @@
                     <thead>
                         <tr>
                             <th>先生名</th>
-                            <th>14:00</th>
-                            <th>15:00</th>
-                            <th>16:00</th>
-                            <th>17:00</th>
-                            <th>18:00</th>
+                            <th>14:00~15:00</th>
+                            <th>15:00~16:00</th>
+                            <th>16:00~17:00</th>
+                            <th>17:00~18:00</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
+                            <!-- スタッフの名前を入力してください -->
                             <td>辻村先生</td>
-                            <td>○</td>
+                            <!-- 14:00~15:00の出欠を⚪︎か×で入力してください -->
                             <td>×</td>
-                            <td>○</td>
-                            <td>○</td>
+                            <!-- 15:00~16:00の出欠を⚪︎か×で入力してください -->
                             <td>×</td>
+                            <!-- 16:00~17:00の出欠を⚪︎か×で入力してください -->
+                            <td>×</td>
+                            <!-- 17:00~18:00の出欠を⚪︎か×で入力してください -->
+                            <td>×</td>
+                        </tr>
                         <tr>
+                            <!-- スタッフの名前を入力してください -->
                             <td>A先生</td>
-                            <td>○</td>
-                            <td>○</td>
-                            <td>○</td>
+                            <!-- 14:00~15:00の出欠を⚪︎か×で入力してください -->
                             <td>×</td>
-                            <td>○</td>
+                            <!-- 15:00~16:00の出欠を⚪︎か×で入力してください -->
+                            <td>×</td>
+                            <!-- 16:00~17:00の出欠を⚪︎か×で入力してください -->
+                            <td>×</td>
+                            <!-- 17:00~18:00の出欠を⚪︎か×で入力してください -->
+                            <td>×</td>
                         </tr>
                         <tr>
+                            <!-- スタッフの名前を入力してください -->
                             <td>B先生</td>
+                            <!-- 14:00~15:00の出欠を⚪︎か×で入力してください -->
                             <td>×</td>
-                            <td>○</td>
+                            <!-- 15:00~16:00の出欠を⚪︎か×で入力してください -->
                             <td>×</td>
-                            <td>○</td>
-                            <td>○</td>
+                            <!-- 16:00~17:00の出欠を⚪︎か×で入力してください -->
+                            <td>×</td>
+                            <!-- 17:00~18:00の出欠を⚪︎か×で入力してください -->
+                            <td>×</td>
                         </tr>
                         <tr>
+                            <!-- スタッフの名前を入力してください -->
                             <td>C先生</td>
-                            <td>○</td>
-                            <td>○</td>
+                            <!-- 14:00~15:00の出欠を⚪︎か×で入力してください -->
                             <td>×</td>
-                            <td>○</td>
+                            <!-- 15:00~16:00の出欠を⚪︎か×で入力してください -->
+                            <td>×</td>
+                            <!-- 16:00~17:00の出欠を⚪︎か×で入力してください -->
+                            <td>×</td>
+                            <!-- 17:00~18:00の出欠を⚪︎か×で入力してください -->
                             <td>×</td>
                         </tr>
                     </tbody>
@@ -108,6 +139,10 @@
             </div>
         </section>
 
+        <!-- アクセスのセクションです。 -->
+        <!-- 変更する場合は既存のコードを参考に会場の名前と住所を入力してください。 -->
+        <!-- 地図はGoogleマップの埋め込みコードを入れてください。 -->
+        <!-- 必要に応じて会場の行を追加してください。 -->
         <section id="access">
             <h3>アクセス</h3>
 
@@ -138,22 +173,28 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3738389186146!2d136.0
                 </div>
             </div>
         </section>
+
+        <!-- ご利用案内のセクションです。開催時間や料金、持ち物などを入力してください。必要に応じて項目を追加してください。 -->
         <section id="info">
             <h3>ご利用案内</h3>
             <div class="info-grid">
                 <div class="info-item">
                     <h4>🕒 開催時間</h4>
+                    <!-- 開催時間の変更はここを編集してください。例えば、14:00 ～ 18:00の場合は以下のように入力してください。 -->
+                    <!-- なお変更する場合は、先生の在校状況の欄の変更も忘れずに行ってください。 -->
                     <p>14:00 ～ 18:00</p>
                     <small>※この時間帯の中で自由にご参加ください</small>
                 </div>
                 <div class="info-item">
                     <h4>💰 料金</h4>
+                    <!-- 料金の変更はここを編集してください。例えば、1回 500円の場合は以下のように入力してください。 -->
                     <p>1回 500円</p>
                     <small>※お手数ですが当日ごとにお支払いください</small><br><small>※14:00~18:00の中で時間に関わらず一律</small>
                 </div>
                 <div class="info-item">
                     <h4>🎒 持ち物</h4>
                     <ul>
+                        <!-- 持ち物のリストです。必要に応じて<li></li>で囲んで追加してください。 -->
                         <li>学校の宿題</li>
                         <li>使いたい問題集・ドリルなど</li>
                         <li>筆記用具</li>
@@ -162,6 +203,8 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3738389186146!2d136.0
                 </div>
             </div>
         </section>
+
+        <!-- お問い合わせ・お申し込みのセクションです。主催者の名前と連絡先を入力してください。必要に応じて項目を追加してください。 -->
         <section id="contact">
             <h3>お問い合わせ・お申し込み</h3>
             <div class="contact-box">
@@ -180,6 +223,8 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3738389186146!2d136.0
     <footer>
         <p>&copy; 2026 学び場 あい</p>
     </footer>
+
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const loader = document.getElementById('loader');
@@ -187,7 +232,7 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3738389186146!2d136.0
             window.addEventListener('load', () => {
                 setTimeout(() => {
                     loader.classList.add('loaded');
-                }, 4000); // ローディング画面を1秒表示
+                }, 4000); // 最初の読み込み画面（学び場あい）を4秒間表示という意味です。希望の秒数に1000をかけて変更できます。
             });
             const now = new Date();
             const year = now.getFullYear();
@@ -214,19 +259,23 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3738389186146!2d136.0
                     right: ''
                 },
                 events: [
+                    // ここでカレンダーに予定を追加できます。
+                    // titleに場所名を'松原公民館'や'粟野公民館'などと入力してください。
+                    // startに開催日を'2026-04-07'のように入力してください。
+                    // colorは背景色で、'#4a90e2'や'#4a7c59'などのカラーコードが基本的に予測変換で入ります。
                     { title: '松原公民館', start: '2026-04-07', color: '#4a90e2' },
                     { title: '松原公民館', start: '2026-04-14', color: '#4a90e2' },
                     { title: '粟野公民館', start: '2026-04-21', color: '#4a7c59' },
                     { title: '粟野公民館', start: '2026-04-28', color: '#4a7c59' },
+                    { title: '松原公民館', start: '2026-05-05', color: '#4a90e2' },
                 ]
             });
             calendar.render();
 
-            // カレンダーを描画した直後に実行されるように設定
             window.addEventListener('load', function () {
                 setTimeout(function () {
                     calendar.updateSize();
-                }, 500); // 0.5秒後に再計算
+                }, 500);
             });
         });
 
