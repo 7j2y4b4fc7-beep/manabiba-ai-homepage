@@ -223,9 +223,9 @@ nav a:hover {
 
     .himawari-1 {
         top: auto;
-        bottom: -10%;
+        bottom: 10px;
         left: auto;
-        right: -10%;
+        right: 10px;
         width: clamp(400px, 70vw, 1000px);
     }
 
