@@ -216,38 +216,9 @@ nav a:hover {
 /* スマホでの閲覧を考慮して調整しています。特に変更は必要ないかと思います。 */
 @media (max-width: 768px) {
 
-    .himawari-2,
+    .himawari-1 .himawari-2,
     .himawari-3 {
         display: none;
-    }
-
-    .himawari-1 {
-        /* 基本位置の設定 */
-        position: absolute !important;
-        top: auto !important;
-        left: auto !important;
-        bottom: 0 !important;
-        right: 0 !important;
-        display: block !important;
-        z-index: 1 !important;
-
-        /* サイズ（さらに大きくしてもOK） */
-        width: 700px !important;
-        height: 700px !important;
-
-        /* 背景の設定 */
-        background-image: url('himawari.001.png') !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        opacity: 0.2 !important;
-        /* 文字が見えにくい場合はもっと薄く（0.3とか）してもいいかも */
-
-        /* ★ここがポイント★ 
-           右に30%、下に20%ほど「はみ出させる」設定 */
-        transform: translate(30%, 20%) !important;
-
-        /* ブレーキ解除 */
-        max-width: none !important;
     }
 
     /* --- A. 文字を小さくする設定（新しい方） --- */
