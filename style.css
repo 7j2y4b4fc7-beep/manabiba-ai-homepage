@@ -232,14 +232,14 @@ nav a:hover {
         z-index: 1 !important;
 
         /* サイズ（さらに大きくしてもOK） */
-        width: 400px !important;
-        height: 400px !important;
+        width: 700px !important;
+        height: 700px !important;
 
         /* 背景の設定 */
         background-image: url('himawari.001.png') !important;
         background-size: contain !important;
         background-repeat: no-repeat !important;
-        opacity: 0.5 !important;
+        opacity: 0.2 !important;
         /* 文字が見えにくい場合はもっと薄く（0.3とか）してもいいかも */
 
         /* ★ここがポイント★ 
