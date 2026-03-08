@@ -227,6 +227,7 @@ nav a:hover {
         left: auto;
         right: 10px;
         width: clamp(400px, 70vw, 1000px);
+        opacity: 0.6;
     }
 
     /* --- A. 文字を小さくする設定（新しい方） --- */
