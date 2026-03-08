@@ -222,27 +222,31 @@ nav a:hover {
     }
 
     .himawari-1 {
-        /* 他の設定はそのまま */
+        /* 位置と表示の強制 */
         position: absolute !important;
+        display: block !important;
         top: auto !important;
         left: auto !important;
-        bottom: 0 !important;
-        right: 0 !important;
-        display: block !important;
+        bottom: -20px !important;
+        /* 少し下にはみ出させる */
+        right: -20px !important;
+        /* 少し右にはみ出させる */
         z-index: 1 !important;
+
+        /* サイズの強制（pxで直接指定してブレーキを外す） */
+        width: 350px !important;
+        height: 350px !important;
+
+        /* 背景画像の設定 */
         background-image: url('himawari.001.png') !important;
         background-size: contain !important;
         background-repeat: no-repeat !important;
+        background-position: bottom right !important;
         opacity: 0.7 !important;
 
-        /* ★ここを修正★ サイズを大きくする */
-        width: 300px !important;
-        /* 好みの大きさに調整してね */
-        height: 300px !important;
-        /* widthと同じ数値にしてね */
-
-        /* ★追加★ 大きくした分、少し画面外にはみ出させると綺麗 */
-        transform: translate(10%, 10%) !important;
+        /* 念のため最大サイズの制限を解除 */
+        max-width: none !important;
+        max-height: none !important;
     }
 
     /* --- A. 文字を小さくする設定（新しい方） --- */
