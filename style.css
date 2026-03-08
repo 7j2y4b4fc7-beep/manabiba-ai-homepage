@@ -222,14 +222,22 @@ nav a:hover {
     }
 
     .himawari-1 {
+        /* 位置をリセットして右下に固定 */
         top: auto !important;
-        bottom: 0 !important;
         left: auto !important;
-        right: 0 !important;
-        width: 60vw !important;
-        height: auto !important;
-        opacity: 0.6 !important;
-        transform: translate(10%, 10%);
+        bottom: -5% !important;
+        /* 下に少しはみ出すくらい */
+        right: -10% !important;
+        /* 右に少しはみ出すくらい */
+
+        /* サイズ指定 */
+        width: 250px !important;
+        height: 250px !important;
+
+        /* 消えないためのおまじない */
+        display: block !important;
+        position: absolute !important;
+        z-index: 1 !important;
     }
 
     /* --- A. 文字を小さくする設定（新しい方） --- */
