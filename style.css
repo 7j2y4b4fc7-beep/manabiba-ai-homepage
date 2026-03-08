@@ -229,6 +229,7 @@ nav a:hover {
         width: 60vw !important;
         height: auto !important;
         opacity: 0.6 !important;
+        transform: translate(10%, 10%);
     }
 
     /* --- A. 文字を小さくする設定（新しい方） --- */
