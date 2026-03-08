@@ -28,13 +28,6 @@ header {
     font-weight: bold;
 }
 
-.header-himawari {
-    height: 1.2em;
-    width: auto;
-    vertical-align: middle;
-    margin-right: 10px;
-}
-
 #calendar-section h3,
 #status h3,
 #access h3,
@@ -105,36 +98,6 @@ nav a:hover {
     background-color: #f9f9f9;
     position: relative;
     overflow: hidden;
-}
-
-.hero-himawari {
-    position: absolute;
-    background-image: url('himawari.001.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.8;
-    z-index: 0;
-}
-
-.himawari-1 {
-    width: clamp(300px, 80vw, 1000px);
-    height: clamp(300px, 80vw, 1000px);
-    top: -40%;
-    left: -5%;
-}
-
-.himawari-2 {
-    width: clamp(400px, 90vw, 1200px);
-    height: clamp(400px, 90vw, 1200px);
-    bottom: -100%;
-    left: -30%;
-}
-
-.himawari-3 {
-    width: clamp(500px, 100vw, 1400px);
-    height: clamp(500px, 100vw, 1400px);
-    bottom: -90%;
-    right: -40%;
 }
 
 .hero h2 {
@@ -215,11 +178,6 @@ nav a:hover {
 
 /* スマホでの閲覧を考慮して調整しています。特に変更は必要ないかと思います。 */
 @media (max-width: 768px) {
-
-    .himawari-1 .himawari-2,
-    .himawari-3 {
-        display: none;
-    }
 
     /* --- A. 文字を小さくする設定（新しい方） --- */
     #calendar {
