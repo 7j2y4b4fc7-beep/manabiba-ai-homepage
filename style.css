@@ -234,8 +234,8 @@ nav a:hover {
         z-index: 1 !important;
 
         /* サイズの強制（pxで直接指定してブレーキを外す） */
-        width: 350px !important;
-        height: 350px !important;
+        width: 500px !important;
+        height: 500px !important;
 
         /* 背景画像の設定 */
         background-image: url('himawari.001.png') !important;
