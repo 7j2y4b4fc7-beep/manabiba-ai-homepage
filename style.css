@@ -9,9 +9,7 @@ body {
 }
 
 header {
-    /*ヘッダーの色を変更できます。必要に応じてカラーコードを入力してください。（現状はひまわりをイメージした黄色になっています）（最初の読み込み画面の背景色と同色になっています）*/
     background-color: #ffb300;
-    /*ヘッダー内（一番上）の 学び場 あい の色を変更できます。（現状は茶色です）*/
     color: #5d4037;
     padding: 0.8rem 5%;
     display: flex;
@@ -19,6 +17,45 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    z-index: 100;
+    position: relative;
+    overflow: hidden;
+}
+
+/* headerのグラデーションの設定　（ここは基本的に変更の必要はありません） */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-45deg, #ffb300, #ffe371, #ffcc80, #ffb300);
+    background-size: 400% 400%;
+    z-index: -1;
+    opacity: 0;
+    animation: gradientAnimation 30s ease 8s infinite forwards;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        background-position: 100% 50%;
+        opacity: 1;
+    }
+
+    100% {
+        background-position: 0% 50%;
+        opacity: 1;
+    }
 }
 
 .logo {
@@ -153,14 +190,63 @@ nav a:hover {
 }
 
 #calendar {
-    font-family: Kiwi Maru, serif;
+    font-family: 'Kiwi Maru', serif;
     background: white;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid #ffb300;
+    /* 内側の余白を0にすることで、曜日欄を枠に密着させる */
+    padding: 15px 0 0 0;
+    border-radius: 15px;
+    border: 5px solid #ffb300;
     max-width: 100%;
     box-sizing: border-box;
     overflow: hidden;
+}
+
+.fc .fc-toolbar {
+    display: flex;
+    align-items: center;
+    padding: 0 15px 10px 15px !important;
+    margin-bottom: 5px !important;
+}
+
+.fc-toolbar-title {
+    font-size: clamp(1.2rem, 3vw, 4rem) !important;
+    color: #5d4037;
+}
+
+.fc-toolbar-chunk {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fc-col-header {
+    width: 100% !important;
+}
+
+/* カレンダー内部のテーブル自体の角丸を強制的にリセットして隙間を消す */
+.fc-theme-standard .fc-scrollgrid,
+.fc-scrollgrid-sync-table,
+.fc-col-header {
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+/* 曜日のエリアを枠の端まで広げる */
+.fc-col-header-cell {
+    background-color: #ffb300;
+    border: none !important;
+}
+
+/* 曜日の文字周りの余計な影や角丸を消す */
+.fc-col-header-cell-cushion {
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none !important;
+    padding: 12px 0 !important;
+    /* 少し高さを出すと綺麗 */
+    display: block !important;
+    background: none !important;
+    /* ここで白い影（背景）を消す */
 }
 
 
@@ -233,21 +319,41 @@ nav a:hover {
 table {
     width: 100%;
     min-width: 500px;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     margin-top: 20px;
     background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    /* 外枠の線をここで一括設定 */
+    border: 2px solid #ffb300;
 }
 
 th,
 td {
     padding: 12px;
     text-align: center;
-    border: 1px solid #ffb300;
+    border: none;
+    border-right: 1px solid #ffb300;
+    border-bottom: 1px solid #ffb300;
+    color: #5d4037;
+}
+
+/* 一番右の列の線を消しています。（外枠と重ならないように） */
+th:last-child,
+td:last-child {
+    border-right: none;
+}
+
+/* 一番下の行の線を消しています（外枠と重ならないように） */
+tr:last-child td {
+    border-bottom: none;
 }
 
 th {
     background-color: #ffb300;
     color: white;
+    font-weight: bold;
 }
 
 #access {
