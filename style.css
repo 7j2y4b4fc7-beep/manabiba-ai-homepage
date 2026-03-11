@@ -30,18 +30,13 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    /* 色の配置を 0%, 25%, 50%, 75%, 100% と等間隔にして、最初と最後を完全に一致させる */
-    background-image: linear-gradient(-45deg,
-            #ffb300 0%,
-            #ffe371 25%,
-            #ffcc80 50%,
-            #ffe371 75%,
-            #ffb300 100%);
+    /* 色の並びはシンプルでOK */
+    background-image: linear-gradient(-45deg, #ffb300, #ffe371, #ffcc80, #ffb300);
     background-size: 400% 400%;
     z-index: -1;
     opacity: 0;
-    /* 動きをよりゆったりさせるために20秒に変更 */
-    animation: gradientAnimation 20s ease 8s infinite forwards;
+    /* 「alternate」を追加して、右に行って左に戻る往復運動にする */
+    animation: gradientAnimation 20s ease 8s infinite alternate forwards;
 }
 
 @keyframes gradientAnimation {
@@ -50,18 +45,14 @@ header::before {
         opacity: 0;
     }
 
-    /* ローダーが上がった後にふわっと出る */
+    /* 最初の8秒（ローダー中）が終わった直後にふわっと出す */
     5% {
         opacity: 1;
     }
 
-    /* 100%まで行かずに、50%（中間地点）で折り返す設定にすると繋ぎ目が消える */
-    50% {
-        background-position: 100% 50%;
-    }
-
+    /* 100%（20秒後）に右端へ。その後、20秒かけて 0% へ逆再生で戻る */
     100% {
-        background-position: 0% 50%;
+        background-position: 100% 50%;
         opacity: 1;
     }
 }
@@ -73,11 +64,7 @@ header::before {
     font-weight: bold;
 }
 
-#calendar-section h3,
-#status h3,
-#access h3,
-#info h3,
-#contact h3 {
+main section h3 {
     line-height: 1.4;
     font-size: clamp(1rem, 4vw, 1.8rem);
     color: #5d4037;
@@ -257,7 +244,6 @@ nav a:hover {
 /* スマホでの閲覧を考慮して調整しています。特に変更は必要ないかと思います。 */
 @media (max-width: 768px) {
 
-    /* --- A. 文字を小さくする設定（新しい方） --- */
     #calendar {
         font-size: 0.7rem !important;
     }
@@ -308,6 +294,85 @@ nav a:hover {
     }
 }
 
+/* 先生紹介セクション */
+#teachers {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 先生カードを並べるグリッド */
+.teacher-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.teacher-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* 先生一人一人のカード */
+.teacher-card {
+    flex: 0 0 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #ffb300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* 写真のスタイル */
+.teacher-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* 正円にする */
+    object-fit: cover;
+    border: 3px solid #fff4c7;
+    margin-bottom: 15px;
+}
+
+.teacher-text h4 {
+    margin: 0 0 10px 0;
+    color: #5d4037;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #ffb300;
+    display: inline-block;
+    padding-bottom: 3px;
+}
+
+.teacher-bio {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.teacher-message {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #8d6e63;
+    background: #fffef0;
+    padding: 8px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* スマホでは縦並びにする */
+@media (max-width: 600px) {
+    .teacher-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 #status {
     padding: 40px 20px;
     max-width: 800px;
@@ -329,7 +394,6 @@ table {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    /* 外枠の線をここで一括設定 */
     border: 2px solid #ffb300;
 }
 
@@ -391,7 +455,7 @@ th {
     gap: 30px;
     padding: 20px;
     border-radius: 20px;
-    border: 2px solid #ffb300;
+    background-color: #ffffff;
 }
 
 .access-info {
