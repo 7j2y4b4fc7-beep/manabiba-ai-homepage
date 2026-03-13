@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学び場 あい 公式ホームページ</title>
-    <!-- 学び場あいの説明文を入力してください。検索エンジンで検索した際に表示される文章になります。 -->
-    <meta name="description" content="学び場あいの公式ホームページです。学校になかなか通えていない生徒などを中心に、勉強に不安を抱えている子供を支援している福井県敦賀市の塾です。">
+    <!-- 学び場あいの説明文を入力してください。検索エンジン（googleやyahooなど）で検索した際に表示される文章になります。 -->
+    <meta name="description" content="学び場あいの公式ホームページです。学校になかなか通えていない生徒などを中心に、勉強に不安を抱えている子供たちを支援している福井県敦賀市の学習塾です。">
 
+    <!-- 以下の区画は変更しないでください -->
     <meta name="robots" content="noindex">
     <meta property="og:title" content="学び場 あい 公式ホームページ">
     <meta property="og:description" content="学び場あいの活動予定や最新情報を掲載しています。">
@@ -20,7 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
 </head>
 
-<!-- このstyleの内容は、別ファイルstyle.cssに記載されています。 -->
+<!-- このstyleの内容は、別ファイル#style.cssに記載されています。 -->
 <style>
 </style>
 
@@ -38,8 +39,8 @@
             <ul>
                 <!-- 画面冒頭のページ内各セクションへのリンクです。必要に応じて項目を追加してください。 -->
                 <li><a href="#calendar-section">開講カレンダー</a></li>
-                <li><a href="#teachers">先生の紹介</a></li>
-                <li><a href="#status">先生の在校状況</a></li>
+                <li><a href="#teachers">スタッフの紹介</a></li>
+                <li><a href="#status">スタッフの在校状況</a></li>
                 <li><a href="#access">会場へのアクセス</a></li>
                 <li><a href="#contact">お問い合わせ・お申し込み</a></li>
             </ul>
@@ -50,12 +51,38 @@
     <main>
         <!-- heroという背景が白い部分のセクションです。最初のチラシに書いた説明文を入れています。必要に応じて変更してください。 -->
         <section class="hero">
-            <h2><span style="display: inline-block;">明日に向かって、</span><span style="display: inline-block;">一歩ずつ</span>
+            <h2 class="kiwi-maru">
+                <span style="display: inline-block;">明日に向かって、</span><span style="display: inline-block;">一歩ずつ</span>
             </h2>
-            <!-- 最初のチラシに書いた説明文です。必要に応じて変更してください。改行を任意で行う場合は<br>を入れてください。 -->
-            <p>「この問題の解き方がよくわからない」<br>「この言葉の意味を説明してほしい」<br>「そろそろ勉強に力を入れたい」など、<br>こんな気持ちを抱えている小学5年生から中学3年生のみなさんへ。<br>
-                学び場 あい
-                では、一人一人の気持ちやペースを大切にしながら、<br>教科書を中心に無理なく学習をサポートしていきます。<br><br>「もう一度復習しよう」<br>「少しずつやってみよう」<br>という気持ちがあれば大丈夫です。<br>安心して始められる場所がここにあります。まずはお気軽にご相談ください。
+
+            <div class="chat-container">
+                <div class="chat-row right">
+                    <div class="bubble right">この問題の解き方がよくわからない😣</div>
+                    <img src="student-icon-boy.001.jpeg" class="student-icon">
+                </div>
+
+                <div class="chat-row right">
+                    <div class="bubble right">この言葉の意味を説明してほしい...</div>
+                    <img src="student-icon-girl.001.jpeg" class="student-icon">
+                </div>
+
+                <div class="chat-row right">
+                    <div class="bubble right">そろそろ勉強に力を入れたい！</div>
+                    <img src="student-icon-boy.001.jpeg" class="student-icon">
+                </div>
+            </div>
+
+            <div class="chat-container">
+                <div class="chat-row left">
+                    <img src="teacher-portrait.jpeg" class="student-icon">
+                    <div class="bubble left"> 学び場 あい では<br>一人一人の気持ちやペースを大切にしながら、<br>教科書を中心に無理なく学習をサポートしていきます！<br><br>
+                        「もう一度復習しよう」「少しずつやってみよう」<br>という気持ちがあれば大丈夫です👍<br></div>
+                </div>
+            </div>
+
+            <p class="hero-intro">
+                小学5年生から中学3年生のみなさんへ。<br>
+                安心して始められる場所がここにあります。まずはお気軽にご相談ください。
             </p>
         </section>
 
@@ -67,65 +94,83 @@
             </div>
         </section>
 
-        <!-- 先生紹介のセクションです。 -->
+        <!--スタッフ紹介のセクションです。 -->
         <section id="teachers">
-            <h3>先生の紹介</h3>
+            <h3>スタッフの紹介</h3>
             <div class="teacher-grid">
+                <!-- このteacher-cardがスタッフ一人一人の自己紹介カードとなります。スタッフの人数が増え自己紹介カードを追加したい場合はこの区画をコピーし、必要な部分を変更することで使用可能です。 -->
+
+                <!-- スタッフ① -->
                 <div class="teacher-card">
                     <div class="teacher-image">
                         <img src="teacher-portrait.jpeg">
                     </div>
                     <div class="teacher-text">
+                        <!-- 名前を入力してください -->
                         <h4>辻村先生（代表）</h4>
+                        <!-- 簡単な経歴を入力してください -->
                         <p class="teacher-bio">元中学校教師。<br>約40年にわたり社会科を教えてきました。</p>
+                        <!-- ひとことメッセージを入力してください。 -->
                         <p class="teacher-message">自分のペースで大丈夫。<br>一緒に一歩ずつ進んでいきましょう!</p>
                     </div>
                 </div>
 
+                <!-- スタッフ② -->
                 <div class="teacher-card">
                     <div class="teacher-image">
                         <img src="teacher-portrait.jpeg">
                     </div>
                     <div class="teacher-text">
+                        <!-- 名前を入力してください -->
                         <h4>A先生</h4>
+                        <!-- 簡単な経歴を入力してください -->
                         <p class="teacher-bio">経歴を簡単に入力してください。</p>
+                        <!-- ひとことメッセージを入力してください。 -->
                         <p class="teacher-message">ひとことメッセージを入力してください。</p>
                     </div>
                 </div>
 
+                <!-- スタッフ③ -->
                 <div class="teacher-card">
                     <div class="teacher-image">
                         <img src="teacher-portrait.jpeg">
                     </div>
                     <div class="teacher-text">
+                        <!-- 名前を入力してください -->
                         <h4>B先生</h4>
+                        <!-- 経歴を簡単に入力してください。 -->
                         <p class="teacher-bio">経歴を簡単に入力してください。</p>
+                        <!-- ひとことメッセージを入力してください。 -->
                         <p class="teacher-message">ひとことメッセージを入力してください。</p>
                     </div>
                 </div>
 
+                <!-- スタッフ④ -->
                 <div class="teacher-card">
                     <div class="teacher-image">
                         <img src="teacher-portrait.jpeg">
                     </div>
                     <div class="teacher-text">
+                        <!-- 名前を入力してください -->
                         <h4>C先生</h4>
+                        <!-- 経歴を簡単に入力してください。 -->
                         <p class="teacher-bio">経歴を簡単に入力してください。</p>
+                        <!-- ひとことメッセージを入力してください。 -->
                         <p class="teacher-message">ひとことメッセージを入力してください。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 先生の在校状況のセクションです。先生の名前と時間帯ごとの出欠を⚪︎か×で入力してください。必要に応じて先生の行を追加してください。  -->
+        <!-- スタッフの在校状況のセクションです。スタッフの名前と時間帯ごとの出欠を⚪︎か×で入力してください。必要に応じて先生の行を追加してください。  -->
         <section id="status">
-            <h3>本日<span id="today-date"></span>の先生</h3>
-            <p>不在の場合があります。<br>こちらでご確認ください。</p>
+            <h3>本日<span id="today-date"></span>のスタッフ</h3>
+            <p>不在の場合があります。こちらでご確認ください。</p>
             <div class="table-container">
                 <table border="1">
                     <thead>
                         <tr>
-                            <th>先生名</th>
+                            <th>スタッフ</th>
                             <th>14:00~15:00</th>
                             <th>15:00~16:00</th>
                             <th>16:00~17:00</th>
@@ -190,7 +235,7 @@
         <!-- アクセスのセクションです。 -->
         <!-- 変更する場合は既存のコードを参考に会場の名前と住所を入力してください。 -->
         <!-- 地図はGoogleマップの埋め込みコードを入れてください。 -->
-        <!-- 必要に応じて会場の行を追加してください。 -->
+        <!-- 必要に応じて会場の区画を追加してください。 -->
         <section id="access">
             <h3>アクセス</h3>
 
@@ -229,7 +274,7 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3738389186146!2d136.0
                 <div class="info-item">
                     <h4>🕒 開催時間</h4>
                     <!-- 開催時間の変更はここを編集してください。例えば、14:00 ～ 18:00の場合は以下のように入力してください。 -->
-                    <!-- なお変更する場合は、先生の在校状況の欄の変更も忘れずに行ってください。 -->
+                    <!-- なお変更する場合は、スタッフの在校状況の欄の変更も忘れずに行ってください。 -->
                     <p>14:00 ～ 18:00</p>
                     <small>※この時間帯の中で自由にご参加ください</small>
                 </div>
@@ -272,7 +317,7 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3738389186146!2d136.0
         <p>&copy; 2026 学び場 あい</p>
     </footer>
 
-
+    <script src="events.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const loader = document.getElementById('loader');
@@ -306,17 +351,7 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3738389186146!2d136.0
                     center: '',
                     right: 'title'
                 },
-                events: [
-                    // ここでカレンダーに予定を追加できます。
-                    // titleに場所名を'松原公民館'や'粟野公民館'などと入力してください。
-                    // startに開催日を'2026-04-07'のように入力してください。
-                    // colorは背景色で、'#4a90e2'や'#4a7c59'などのカラーコードが基本的に予測変換で入ります。
-                    { title: '松原公民館', start: '2026-04-07', color: '#4a90e2' },
-                    { title: '松原公民館', start: '2026-04-14', color: '#4a90e2' },
-                    { title: '粟野公民館', start: '2026-04-21', color: '#4a7c59' },
-                    { title: '粟野公民館', start: '2026-04-28', color: '#4a7c59' },
-                    { title: '松原公民館', start: '2026-05-05', color: '#4a90e2' },
-                ]
+                events: myEvents
             });
             calendar.render();
 
