@@ -127,24 +127,41 @@ nav a:hover {
 .hero {
     padding: clamp(40px, 10vw, 100px) clamp(20px, 5vw, 80px);
     text-align: center;
-    /* heroの背景色を変更できます。必要に応じてカラーコードを入力してください。（現状は白色に近い色になっています） */
-    background-color: #f9f9f9;
+    background-image: url('hero2.jpeg');
+    background-size: cover;
+    background-position: center;
     position: relative;
+    min-height: 400px;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(154, 154, 154, 0.5);
+    z-index: 1;
 }
 
 .hero h2 {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-    color: #5d4037;
-    margin-bottom: 0.5em;
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    font-style: italic;
+    color: white;
+    margin-bottom: clamp(40px, 8vw, 100px);
     line-height: 1.5;
     position: relative;
     z-index: 10;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
 
 .hero p {
-    font-size: clamp(0.7rem, 1.8vw, 1.25rem);
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    font-style: italic;
     line-height: 1.8;
-    color: #5d4037;
+    color: white;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -158,6 +175,8 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    position: relative;
+    z-index: 10;
 }
 
 .chat-row {
@@ -175,8 +194,8 @@ nav a:hover {
 }
 
 .student-icon {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
@@ -421,8 +440,8 @@ nav a:hover {
 
 /* 写真のスタイル */
 .teacher-image img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #fff4c7;
