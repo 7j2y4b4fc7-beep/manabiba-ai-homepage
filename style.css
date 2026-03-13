@@ -58,10 +58,26 @@ header::before {
 }
 
 .logo {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
     margin: 0;
+    margin-top: clamp(5px, 2vw, 40px);
+    margin-bottom: clamp(5px, 2vw, 40px);
     white-space: nowrap;
+}
+
+.logo h1 {
+    margin: 0;
+    line-height: 0.7;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    text-align: center;
     font-weight: bold;
+}
+
+.logo-sub {
+    display: block;
+    font-size: 0.5em;
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    margin-bottom: -8px;
 }
 
 main section h3 {
