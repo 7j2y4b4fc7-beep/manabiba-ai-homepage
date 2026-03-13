@@ -236,8 +236,8 @@ nav a:hover {
 /* スマホ用調整 */
 @media (max-width: 768px) {
     .student-icon {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
     }
 
     .bubble {
