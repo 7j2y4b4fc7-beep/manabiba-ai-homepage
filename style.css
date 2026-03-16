@@ -151,7 +151,7 @@ nav a:hover {
 .news-item {
     max-width: 1000px;
     margin: 0 auto;
-    font-size: clamp(0.6rem, 1.5vw, 1rem);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     color: #5d4037;
     display: flex;
     align-items: center;
@@ -163,8 +163,8 @@ nav a:hover {
     background-color: red;
     color: white;
     padding: 2px 8px;
-    border-radius: 4px;
-    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+    border-radius: 10px;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
     font-weight: normal;
     flex-shrink: 0;
     animation: pulse 2s infinite;
@@ -598,6 +598,7 @@ td {
     border-right: 1px solid #ffb300;
     border-bottom: 1px solid #ffb300;
     color: #5d4037;
+    white-space: nowrap;
 }
 
 /* 一番右の列の線を消しています。（外枠と重ならないように） */
