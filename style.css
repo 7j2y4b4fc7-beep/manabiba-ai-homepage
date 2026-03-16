@@ -30,12 +30,10 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    /* 色の並びはシンプルでOK */
     background-image: linear-gradient(-45deg, #ffb300, #ffe371, #ffcc80, #ffb300);
     background-size: 400% 400%;
     z-index: -1;
     opacity: 0;
-    /* 「alternate」を追加して、右に行って左に戻る往復運動にする */
     animation: gradientAnimation 20s ease 8s infinite alternate forwards;
 }
 
@@ -90,25 +88,28 @@ main section h3 {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 30px;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul li a {
-    padding: 5px 8px;
-    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    background: #71adf0;
     border-radius: 10px;
     text-decoration: none;
     /* navのリンクの色を変更できます。必要に応じてカラーコードを入力してください。（現状は茶色です）*/
-    color: #5d4037;
+    color: white;
     font-size: clamp(0.7rem, 1.5vw, 1.5rem);
     white-space: nowrap;
 }
 
 nav a:hover {
     /* navのリンクにマウスを乗せたときの色を変更できます。必要に応じてカラーコードを入力してください。（現状は白色になっています） */
-    color: #ffffff;
+    color: white;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
 }
 
 @media (max-width: 768px) {
@@ -134,11 +135,63 @@ nav a:hover {
     nav ul li a {
         font-size: 0.75rem;
         padding: 5px 8px;
-        background: rgba(255, 255, 255, 0.2);
+        background: #71adf0;
         border-radius: 10px;
         display: block;
     }
 }
+
+/* お知らせに関する設定 */
+.news-banner {
+    background-color: #fff4c7;
+    padding: 10px 5%;
+    border-bottom: 2px solid #ffb300;
+}
+
+.news-item {
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: clamp(0.6rem, 1.5vw, 1rem);
+    color: #5d4037;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.news-label {
+    background-color: red;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+    font-weight: normal;
+    flex-shrink: 0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.news-text {
+    line-height: 1.4;
+}
+
+
 
 .hero {
     padding: clamp(40px, 10vw, 100px) clamp(20px, 5vw, 80px);
@@ -241,8 +294,8 @@ nav a:hover {
 /* 右側の吹き出し（薄い青色や緑色でお好みで） */
 .bubble.right {
     align-self: flex-end;
-    background-color: #4a90e2;
-    border: 2px solid #4a90e2;
+    background-color: #71adf0;
+    border: 2px solid #71adf0;
     color: white;
     text-align: left;
 }
@@ -265,7 +318,7 @@ nav a:hover {
     top: 15px;
     right: -12px;
     border-width: 8px 0 8px 12px;
-    border-color: transparent transparent transparent #4a90e2;
+    border-color: transparent transparent transparent #71adf0;
 }
 
 /* スマホ用調整 */
@@ -483,7 +536,7 @@ nav a:hover {
     font-size: 0.85rem;
     font-style: italic;
     color: #ffffff;
-    background: #4a90e2;
+    background: #71adf0;
     padding: 8px;
     border-radius: 8px;
     width: 100%;
@@ -502,7 +555,7 @@ nav a:hover {
     transform: translateX(-50%);
     border-style: solid;
     border-width: 0 10px 12px 10px;
-    border-color: transparent transparent #4a90e2 transparent;
+    border-color: transparent transparent #71adf0 transparent;
 }
 
 /* スマホでは縦並びにする */
@@ -585,7 +638,7 @@ th {
 }
 
 .matsubara-title {
-    background-color: #4a90e2;
+    background-color: #71adf0;
     color: #ffffff;
 }
 
