@@ -39,7 +39,7 @@
 
         <nav>
             <ul>
-                <!-- 画面冒頭のページ内各セクションへのリンクです。必要に応じて項目を追加してください。 -->
+                <!-- 画面冒頭のページ内各セクションへのリンクです。必要に応じて以下を参考に項目を追加してください。 -->
                 <li><a href="#calendar-section">開講カレンダー</a></li>
                 <li><a href="#teachers">スタッフ紹介</a></li>
                 <li><a href="#status">スタッフ在校状況</a></li>
@@ -50,16 +50,20 @@
         </nav>
     </header>
 
+    <!-- 急な休講など、緊急にアナウンスしたい内容をヘッダー下に表示します。その際には<span class="news-text">と</span>の間に内容を記入してください。 -->
+    <!-- アナウンス内容が特にない場合は、<div class="news-banner">からそれと同じ階層の</div>までを選択した上でCtrlと/を同時におして非表示にしてください。（現状は表示になっています。） -->
+    <!-- ここから↓ -->
     <div class="news-banner">
         <div class="news-item">
             <span class="news-label">重要</span>
-            <span class="news-text">本日は悪天候のため休講となります。</span>
+            <span class="news-text">本日は悪天候のため休講となります</span>
             <span class="news-label">重要</span>
         </div>
     </div>
+    <!-- ここまで↑ -->
 
     <main>
-        <!-- heroという背景が白い部分のセクションです。最初のチラシに書いた説明文を入れています。必要に応じて変更してください。 -->
+        <!-- heroという背景が写真になっている部分のセクションです。現在最初のチラシに書いた説明文に近いものを記入してあります。必要に応じて変更してください。 -->
         <section class="hero">
             <h2 class="kiwi-maru">
                 <span style="display: inline-block;">明日に向かって、</span><span style="display: inline-block;">一歩ずつ</span>
@@ -112,8 +116,10 @@
                 <!-- このteacher-cardがスタッフ一人一人の自己紹介カードとなります。スタッフの人数が増え自己紹介カードを追加したい場合はこの区画をコピーし、必要な部分を変更することで使用可能です。 -->
 
                 <!-- スタッフ① -->
+                <!-- ここから↓ -->
                 <div class="teacher-card">
                     <div class="teacher-image">
+                        <!-- 代表である辻村先生の写真はteacher-portrait-1.jpegというファイル名で保存してください。それを表示します。 -->
                         <img src="teacher-portrait-1.jpeg">
                     </div>
                     <div class="teacher-text">
@@ -125,10 +131,12 @@
                         <p class="teacher-message">自分のペースで大丈夫。<br>一緒に一歩ずつ進んでいきましょう!</p>
                     </div>
                 </div>
+                <!-- ここまで↑ -->
 
                 <!-- スタッフ② -->
                 <div class="teacher-card">
                     <div class="teacher-image">
+                        <!-- スタッフ②の写真はteacher-portrait-2.jpegというファイル名で保存してください。それを表示します。 -->
                         <img src="teacher-portrait-2.jpeg">
                     </div>
                     <div class="teacher-text">
@@ -144,6 +152,7 @@
                 <!-- スタッフ③ -->
                 <div class="teacher-card">
                     <div class="teacher-image">
+                        <!-- スタッフ③の写真はteacher-portrait-3.jpegというファイル名で保存してください。それを表示します。 -->
                         <img src="teacher-portrait-3.jpeg">
                     </div>
                     <div class="teacher-text">
@@ -159,6 +168,7 @@
                 <!-- スタッフ④ -->
                 <div class="teacher-card">
                     <div class="teacher-image">
+                        <!-- スタッフ④の写真はteacher-portrait-4.jpegというファイル名で保存してください。それを表示します。 -->
                         <img src="teacher-portrait-4.jpeg">
                     </div>
                     <div class="teacher-text">
@@ -190,7 +200,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <!-- スタッフの名前を入力してください -->
+                            <!-- スタッフ①（代表）の名前を入力してください -->
                             <td>辻村先生</td>
                             <!-- 14:00~15:00の出欠を⚪︎か×で入力してください -->
                             <td>×</td>
@@ -202,7 +212,7 @@
                             <td>×</td>
                         </tr>
                         <tr>
-                            <!-- スタッフの名前を入力してください -->
+                            <!-- スタッフ②の名前を入力してください -->
                             <td>A先生</td>
                             <!-- 14:00~15:00の出欠を⚪︎か×で入力してください -->
                             <td>×</td>
@@ -214,7 +224,7 @@
                             <td>×</td>
                         </tr>
                         <tr>
-                            <!-- スタッフの名前を入力してください -->
+                            <!-- スタッフ③の名前を入力してください -->
                             <td>B先生</td>
                             <!-- 14:00~15:00の出欠を⚪︎か×で入力してください -->
                             <td>×</td>
@@ -226,7 +236,7 @@
                             <td>×</td>
                         </tr>
                         <tr>
-                            <!-- スタッフの名前を入力してください -->
+                            <!-- スタッフ④の名前を入力してください -->
                             <td>C先生</td>
                             <!-- 14:00~15:00の出欠を⚪︎か×で入力してください -->
                             <td>×</td>
@@ -248,8 +258,10 @@
         <!-- 地図はGoogleマップの埋め込みコードを入れてください。 -->
         <!-- 必要に応じて会場の区画を追加してください。 -->
         <section id="access">
+
             <h3>アクセス</h3>
 
+            <!-- ここから↓ -->
             <div class="access-container" style="border: 5px solid #4a7c59;">
                 <div class="access-info">
                     <h4 class="awano-title">粟野公民館</h4>
@@ -257,12 +269,14 @@
                     <p><strong>開講曜日: 第２、第４火曜日</strong></p>
                 </div>
                 <div class="access-map">
+                    <!-- ここにgooglemapのurlをコピー&ペーストしてください。現状は粟野公民館のurlになっています。 -->
                     <iframe
                         src="
 https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3738389186146!2d136.04972759999998!3d35.6185094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001e54ef9468aff%3A0x4c78a2a14cbaa19a!2z57Kf6YeO5YWs5rCR6aSo!5e0!3m2!1sja!2sjp!4v1772190835452!5m2!1sja!2sjp"
                         width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
+            <!-- ここまで↑ -->
 
             <div class="access-container" style="margin-top: 20px; border: 5px solid #4a90e2;">
                 <div class="access-info">
@@ -271,6 +285,7 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3738389186146!2d136.0
                     <p><strong>開講曜日: 第１、第３火曜日</strong></p>
                 </div>
                 <div class="access-map">
+                    <!-- ここにgooglemapのurlをコピー&ペーストしてください。現状は松原公民館のurlになっています。 -->
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2214.49687520103!2d136.0498885459386!3d35.64715256250217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001e4d5e42c73f1%3A0x2ab51723ce2b5fce!2z5p2-5Y6f5YWs5rCR6aSo!5e0!3m2!1sja!2sjp!4v1772191177642!5m2!1sja!2sjp"
                         width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -278,7 +293,7 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3738389186146!2d136.0
             </div>
         </section>
 
-        <!-- ご利用案内のセクションです。開催時間や料金、持ち物などを入力してください。必要に応じて項目を追加してください。 -->
+        <!-- ご利用案内のセクションです。開催時間や料金、持ち物などが入力されています。必要に応じて変更や項目の追加をしてください。 -->
         <section id="info">
             <h3>ご利用案内</h3>
             <div class="info-grid">
@@ -331,9 +346,10 @@ https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3738389186146!2d136.0
     </main>
 
     <footer>
-        <p>&copy; 2026 学び場 あい made by tomomasa amakatsu</p>
+        <p>&copy; 2026 学び場 あい</p>
     </footer>
 
+    <!-- 以下の区画は注釈がある部分以外変更しないでください -->
     <script src="events.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
