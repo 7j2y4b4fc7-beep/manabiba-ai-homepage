@@ -1,3 +1,4 @@
+/* ホームページ全体に適用する字体、字色、背景色の設定（ここは基本的に変更の必要はありません） */
 body {
     font-family: 'Kiwi Maru', serif;
     line-height: 1.6;
@@ -8,6 +9,7 @@ body {
     background-color: #fff4c7;
 }
 
+/* headerの背景色、テキスト色の設定（ここは基本的に変更の必要はありません） */
 header {
     background-color: #ffb300;
     color: #5d4037;
@@ -43,12 +45,10 @@ header::before {
         opacity: 0;
     }
 
-    /* 最初の8秒（ローダー中）が終わった直後にふわっと出す */
     5% {
         opacity: 1;
     }
 
-    /* 100%（20秒後）に右端へ。その後、20秒かけて 0% へ逆再生で戻る */
     100% {
         background-position: 100% 50%;
         opacity: 1;
@@ -104,6 +104,9 @@ nav ul li a {
     color: white;
     font-size: clamp(0.7rem, 1.5vw, 1.5rem);
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav a:hover {
@@ -143,7 +146,7 @@ nav a:hover {
 
 /* お知らせに関する設定 */
 .news-banner {
-    background-color: #fff4c7;
+    background-color: white;
     padding: 10px 5%;
     border-bottom: 2px solid #ffb300;
 }
@@ -334,7 +337,7 @@ nav a:hover {
     }
 }
 
-/* スマホでの閲覧を考慮して、以下のようにhero（背景が白の部分）のスタイルを調整しています。特に変更は必要ないかと思います。 */
+/* スマホでの閲覧を考慮して、以下のようにhero（背景が画像の部分）のスタイルを調整しています。特に変更は必要ないかと思います。 */
 @media (max-width: 768px) {
     .hero {
         /* スマホ用に上下の余白を少し詰めてあります。 */
@@ -365,7 +368,6 @@ nav a:hover {
 #calendar {
     font-family: 'Kiwi Maru', serif;
     background: white;
-    /* 内側の余白を0にすることで、曜日欄を枠に密着させる */
     padding: 15px 0 0 0;
     border-radius: 15px;
     border: 5px solid #ffb300;
@@ -392,7 +394,6 @@ nav a:hover {
     gap: 8px;
 }
 
-/* カレンダー内部のテーブル自体の角丸を強制的にリセットして隙間を消す */
 .fc-theme-standard .fc-scrollgrid,
 .fc-scrollgrid-sync-table,
 .fc-col-header {
@@ -400,22 +401,18 @@ nav a:hover {
     border-radius: 0 !important;
 }
 
-/* 曜日のエリアを枠の端まで広げる */
 .fc-col-header-cell {
     background-color: #ffb300;
     border: none !important;
 }
 
-/* 曜日の文字周りの余計な影や角丸を消す */
 .fc-col-header-cell-cushion {
     color: white !important;
     font-weight: bold;
     text-decoration: none !important;
     padding: 12px 0 !important;
-    /* 少し高さを出すと綺麗 */
     display: block !important;
     background: none !important;
-    /* ここで白い影（背景）を消す */
 }
 
 
